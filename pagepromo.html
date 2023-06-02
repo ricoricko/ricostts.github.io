@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      
+        #mark{
+            margin-left: 30px;
+  
+        }
+        
+        button{
+            color: black;
+            background-color: black;
+        }
+        h1{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        footer{
+          background-color: black;
+          color: white;
+          font-weight: bold;
+        }
+        footer{
+          background-color:silver;
+          color: black;
+          font-weight: bold;
+          font-size: 14px;
+        }
+        
+        #nav{
+        background-color:ivory;
+      }
+      #abot:hover{
+        color: red;
+      }
+      .subscribed {
+      background-color: red;
+      color: black;
+    }
+    </style>
+    <script>
+        function gantinama() {
+      var button = document.getElementById("subs");
+      if (button.value === "Subscribe") {
+
+        button.value = "Unsubscribe";
+        alert("Selamat Anda Telah Berlangganan Kepada Kami :)")
+        button.classList.add("subscribed");
+      } else {
+        button.value = "Subscribe";
+        alert("Anda Sudah Tidak Berlangganan Kepada Kami :(")
+        button.classList.remove("subscribed");
+      }
+    }
+    
+    </script>
+    <script>
+      window.onload = function() {
+            var countdownDuration = (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000);
+            var targetTime = new Date().getTime() + countdownDuration;
+            var timer = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = targetTime - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                $("#timer").text(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                if (distance < 0) {
+                    clearInterval(timer);
+                    $("#timer").text("Countdown expired");
+                }
+            }, 1000);
+            var countdownDuration2 = (5 * 24 * 60 * 60 * 1000) + (3 * 60 * 60 * 1000);
+            var targetTime2 = new Date().getTime() + countdownDuration2;
+            var timer2 = setInterval(function() {
+
+                var now2 = new Date().getTime();
+                var distance2 = targetTime2 - now2;
+                var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+                var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+                $("#timer2").text(days2 + "d " + hours2 + "h " + minutes2 + "m " + seconds2 + "s");
+                if (distance2 < 0) {
+                    clearInterval(timer);
+                    $("#timer").text("Countdown expired");
+                }
+            }, 1000);
+            var countdownDuration3 = 17 * 60 * 60 * 1000;
+            var targetTime3 = new Date().getTime() + countdownDuration3;
+            var timer3 = setInterval(function() {
+                var now3 = new Date().getTime();
+                var distance3 = targetTime3 - now3;
+                var hours3 = Math.floor(distance3 / (1000 * 60 * 60));
+                var minutes3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds3 = Math.floor((distance3 % (1000 * 60)) / 1000);
+                $("#timer3").text(hours3 + "h " + minutes3 + "m " + seconds3 + "s");
+                if (distance3 < 0) {
+                    clearInterval(timer3);
+                    $("#timer3").text("Countdown expired");
+                }
+            }, 1000);
+        };
+        
+
+    </script>
+    <style>
+      .cek2{
+        background-image: url(bg3.jpg);
+      }
+    </style>
+</head>
+<body>
+    <!-- Utama -->
+    <div class="cek2">
+        <!-- Kedua -->
+        <div class="nav1">
+            <nav class="navbar navbar-expand-lg fixed-top" id="nav">
+                <div class="container-fluid" >
+                  <a class="navbar-brand" href="index.html" id="abot"><b>Home</b></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 400px;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="abot" href="#"><b>Promo Today</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="abot" href="product.html"><b>Product</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="abot" href="pageaboutme.html"><b>About Me</b></a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          More
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" id="abot" href="service.html">Service</a></li>
+                          <li><a class="dropdown-item" id="abot" href="spareparts.html">Our Spare Parts</a></li>
+                          
+                        </ul>
+                      </li>  
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div><br><br><br>
+            <!-- A -->
+            <div>
+                <div class="alert alert-secondary mx-5" role="alert">
+                    <b>Yuk Jadi Orang Pertama yang mendapatkan Infomasi</b> <br> <b>tentang Promo menarik dari kami !!</b>
+                    <input type="button" value="Subscribe" id="subs" onclick="gantinama()" style=" font-weight: bold; ; border-radius: 8%;">
+                  </div>
+                <div class="container text-center">
+                    <div class="row">
+                      <div class="col">
+                        <div class="card" style="width: 20rem;">
+                            <img src="promo1.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <div id="timer" style="text-align: right;"></div>
+                              <p style="text-align: left; font-size: 14px; margin-left: 10px; font-weight: bold;">4 May 2023</p>
+                              <p class="card-text"><b>Program Sales Honda Vario 160 Mei-Juni 2023</b></p>
+                              <a href="#" class="btn btn-primary">Selengkapnya --> </a>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                        <div class="card" style="width: 20rem;">
+                            <img src="promo2.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <div id="timer2" style="text-align: right;"></div>
+                                <p style="text-align: left; font-size: 14px; margin-left: 10px;">01 Feb 2023</p>
+                              <p class="card-text"><b>Program Sales Honda GTR150 Mei-Juni 2023</b></p>
+                              <a href="#" class="btn btn-primary">Selengkapnya --> </a>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                        <div class="card" style="width: 20rem;">
+                            <img src="promo3.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <div id="timer3" style="text-align: right;"></div>
+                                <p style="text-align: left; font-size: 14px; margin-left: 10px;">02 Aug 2022</p>
+                              <p class="card-text"><b>Program Sales Honda CB150X April-Juni 2023</b></p>
+                              <a href="#" class="btn btn-primary">Selengkapnya --> </a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+            </div> <br>
+    </div>
+    <footer>
+      <br>
+      <center>
+
+        <table>
+          <td>
+            <h5 style="font-size: 16px; padding-left: 10px;"> Copyright@2021</h5> 
+
+          </td><td>
+            <h5 style="margin-left: 50px;">Find Us At: </h5>
+          </td>
+          <td>
+            <img src="ig.png" width="30px" height="30px" style="margin-left: 20px;">
+
+          </td>
+          <td>
+            <img src="twit.avif" width="30px" height="30px" style="margin-left: 20px;">
+
+          </td>
+          <td>
+            <img src="fb.png" width="30px" height="30px" style="margin-left: 20px;">
+
+          </td>
+        </table>
+      </center>
+        
+    </footer>
+    
+</body>
+</html>
